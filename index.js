@@ -75,6 +75,5 @@ function endGame(){
     gameConclusion.innerHTML = `
     <h2>Game Over</h2>
     <p>${finalMessage}</p>
-    <p>Score - You: ${playerScore} - Computer: ${computerScore}</p>
+    <p>Score - You: ${playerScore} - Computer: ${computerScore}</p>`
 }
-
