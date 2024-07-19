@@ -9,7 +9,7 @@ scissorsButton.addEventListener('click',()=>playRound('scissors'));
 
 let playerScore = 0;
 let computerScore = 0;
-let currentRound = 0;
+let currentRound = 1;
 let totalRounds = 5;
 const playerScoreDisplay = document.querySelector("#player-score");
 const computerScoreDisplay = document.querySelector("#computer-score");
@@ -75,5 +75,29 @@ function endGame(){
     gameConclusion.innerHTML = `
     <h2>Game Over</h2>
     <p>${finalMessage}</p>
-    <p>Score - You: ${playerScore} - Computer: ${computerScore}</p>`
+    <p>Score - You: ${playerScore} - Computer: ${computerScore}</p>
+    <button id="restart-btn">Restart Game</button>`
+
+    container.appendChild(gameConclusion);
+    document.getElementById("restart-btn").addEventListener('click', restartGame);
+
+    function restartGame(){
+        playerScore = 0;
+        computerScore = 0;
+        currentRound = 1;
+        playerScoreDisplay.textContent = "Player Score : 0";
+        computerScoreDisplay.textContent = "Computer Score : 0";
+        roundDisplay.textContent = `Round : 1 of ${totalRounds}`;
+        if (choices){
+            choices.style.display = "";
+        }
+        if (gameInfo){
+            gameInfo.style.display = "";
+        }
+        if (roundRes){
+            roundRes.style.display = "";
+        }
+        const gameConclusion = document.querySelector("#game-conclusion");
+        resultDisplay.textContent = "Choose your option!";
+    }
 }

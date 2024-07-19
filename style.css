@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    margin: 0;
+    background: #FEAE6F;
+    color: #028391;
+}
+
+#rps{
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px;
+    text-align: center;
+}
+
+#choices button, #restart-btn{
+    padding: 15px 25px;
+    background-color: #01204E;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+}
+
+#result, #scoreboard{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#player-score, #computer-score{
+    margin: 10px;
+}
+
+#game-info{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#round{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#restart-btn{
+    color: green;
+}
